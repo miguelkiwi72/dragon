@@ -10,6 +10,7 @@ import { AgregarJuegoComponent } from './inicio/index/perfil/agregar-juego/agreg
 import { BuscarJuegoComponent } from './inicio/index/perfil/buscar-juego/buscar-juego.component';
 import { ModificarJuegoComponent } from './inicio/index/perfil/modificar-juego/modificar-juego.component';
 import { FormularioMesaComponent } from './inicio/index/formulario-mesa/formulario-mesa.component';
+import { AddMesaComponent } from './inicio/index/add-mesa/add-mesa.component';
 
 
 export const routes: Routes = [
@@ -61,6 +62,11 @@ export const routes: Routes = [
                 path:'reserva',
                 component:ReservaComponent
             },
+            {
+                path:'addmesa',
+                component: AddMesaComponent
+
+            }
         ]
     },
  

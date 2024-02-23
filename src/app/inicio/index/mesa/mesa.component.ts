@@ -3,11 +3,12 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { CabeceraComponent } from '../cabecera/cabecera.component';
 import { Mesa } from '../../../mesa';
 import { FormularioMesaComponent } from '../formulario-mesa/formulario-mesa.component';
+import { AddMesaComponent } from '../add-mesa/add-mesa.component';
 
 @Component({
   selector: 'app-mesa',
   standalone: true,
-  imports: [RouterLink,RouterOutlet,CabeceraComponent,FormularioMesaComponent],
+  imports: [RouterLink,RouterOutlet,CabeceraComponent,FormularioMesaComponent,AddMesaComponent],
   templateUrl: './mesa.component.html',
   styleUrl: './mesa.component.css'
 })
