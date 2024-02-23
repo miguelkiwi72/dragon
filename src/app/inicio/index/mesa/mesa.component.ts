@@ -4,6 +4,7 @@ import { CabeceraComponent } from '../cabecera/cabecera.component';
 import { Mesa } from '../../../mesa';
 import { FormularioMesaComponent } from '../formulario-mesa/formulario-mesa.component';
 import { AddMesaComponent } from '../add-mesa/add-mesa.component';
+import { MesasService } from '../../../mesas.service';
 
 @Component({
   selector: 'app-mesa',
@@ -14,17 +15,20 @@ import { AddMesaComponent } from '../add-mesa/add-mesa.component';
 })
 export class MesaComponent {
 
-  mesas: Mesa[] = [
+  /* mesas: Mesa[] = [
     { id_mesa: 1, tipomesa: 1, disponible: true },
     { id_mesa: 2, tipomesa: 2, disponible: false },
     { id_mesa: 3, tipomesa: 1, disponible: true },
     { id_mesa: 4, tipomesa: 2, disponible: true }
-  ];
+  ]; */
+  mesas!: any;
   id_mesa: any;
 
-  constructor( private router: Router) {
-  
-
+  constructor( private router: Router, private mesasService: MesasService) {
+    this.mesasService.mesas()
+    .subscribe(result => 
+      this.mesas = result
+      )
   }
   ngOnInit(): void {
     // this.elementoVisible =true;
@@ -40,7 +44,7 @@ export class MesaComponent {
 
   // }
   
-   irAFormulario(id_mesa:number){
+  /*  irAFormulario(id_mesa:number){
 
     this.router.navigate(['/formularioMesa',id_mesa]);
     console.log(this.id_mesa)
@@ -49,7 +53,7 @@ export class MesaComponent {
 
 
 
-}
+} */
 
 
 }

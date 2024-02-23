@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { ModificarJuegoComponent } from '../modificar-juego/modificar-juego.component';
-
+import { JuegosService } from '../../../../juegos.service';
 @Component({
   selector: 'app-buscar-juego',
   standalone: true,
@@ -13,7 +13,7 @@ import { ModificarJuegoComponent } from '../modificar-juego/modificar-juego.comp
 export class BuscarJuegoComponent {
   juego='';
   
-  juegos=[
+  /* juegos=[
     {
       "id": 1,
       "nombre": "Póker",
@@ -42,10 +42,16 @@ export class BuscarJuegoComponent {
       "min_jug": 2,
       "tipomesa": "Tablero"
     }
-  ]
-  
-constructor(private router:Router){
+  ] */
 
+  juegos!:any;
+  
+constructor(private router:Router, private juegosService: JuegosService){
+  this.juegosService.retornar()
+  .subscribe(result => 
+    this.juegos = result
+    )
+    console.log(this.juegos)
 }
 
 modificar(id : number){
