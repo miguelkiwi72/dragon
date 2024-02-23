@@ -1,0 +1,10 @@
+@for(reserva of reservas;track $index){
+    <div class="card reserva">
+        <h1>Reserva nº {{reserva.id_reserva}}</h1>
+        
+        <h3>Inicio: {{reserva.fecha_inicio}}<br>
+            Fin: {{reserva.fecha_fin}}</h3>
+            <button class="btn eliminar">Anular</button>
+    </div>
+
+}

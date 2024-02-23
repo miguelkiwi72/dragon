@@ -1,0 +1,14 @@
+.card{
+    background-color: rgb(59, 95, 129);
+    color: white;
+    justify-content: center;
+    width: 600px;
+    
+}
+.form-group{
+    margin: 4px;
+}
+.btn{
+    background-color: rgb(135, 210, 253);
+    border: 1px solid rgb(0, 0, 0);
+}

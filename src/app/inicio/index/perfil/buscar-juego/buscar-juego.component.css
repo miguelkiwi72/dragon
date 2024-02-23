@@ -1,0 +1,15 @@
+.card{
+position: relative;
+background: linear-gradient(rgb(21, 255, 0),rgb(5, 136, 1));
+}
+.btn{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+
+}
+h1{
+    margin: 10px;
+}

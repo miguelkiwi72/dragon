@@ -1,0 +1,13 @@
+#logospain{
+    width:100px;
+}
+#logodrag{
+    width: 50px;
+}
+.cabecera{
+    position: relative;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(81, 236, 133);
+    text-align: center;
+    position: relative;
+}
