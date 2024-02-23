@@ -12,7 +12,7 @@ import { ReservasService } from '../../../reservas.service';
 })
 export class ReservaComponent {
   reservas:any[]=[];
-
+  titulo: string= 'Miguel'
 
   constructor(private ReservasService: ReservasService){
     this.recuperar();
