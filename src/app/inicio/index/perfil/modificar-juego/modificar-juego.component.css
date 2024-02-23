@@ -1,6 +1,6 @@
 .card{
-    background-color: rgb(59, 95, 129);
-    color: white;
+    background-color: rgb(214, 202, 32);
+    color: rgb(0, 0, 0);
     justify-content: center;
     width: 600px;
     
@@ -9,6 +9,7 @@
     margin: 4px;
 }
 .btn{
-    background-color: rgb(135, 210, 253);
+    background-color: rgb(0, 0, 0);
     border: 1px solid rgb(0, 0, 0);
+    color: white;
 }

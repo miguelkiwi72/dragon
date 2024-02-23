@@ -41,7 +41,7 @@
   }
 
 body{
-    background:url(../../assets/images/fondoajedrez.png)  no-repeat ; 
+    background:url(../../assets/images/pexels-raka-miftah-4253690.jpg)  no-repeat ; 
    min-height: 100lvh;
    background-size: cover;
    font-family: 'Exo 2', sans-serif;
@@ -65,11 +65,15 @@ body{
 }
 .inicio{
     border: 2px solid darkgreen;
-    /* background-color: rgb(65, 209, 65); */
+     background-color:white; 
+     padding: 2px;
+     box-shadow: 3px 3px 3px black;
 }
 .registro{
     border: 2px solid rgb(109, 30, 109);
-    /* background-color: rgb(235, 130, 235); */
+    background-color:white; 
+    padding: 2px;
+    box-shadow: 3px 3px 3px black;
 }
 .btn{
     border-radius: 10px;
@@ -77,18 +81,18 @@ body{
 }
 .inicio:hover{
     border: 2px solid darkgreen;
-    background-color: rgb(154, 255, 154);
+    background-color: rgb(3, 255, 3);
     transform: scale(1.05);
 }
 .registro:hover{
     border: 2px solid rgb(109, 30, 109);
-    background-color: rgb(255, 182, 255);
+    background-color: rgb(255, 0, 255);
     transform: scale(1.1);
 }
 header{
     position: relative;
     height: 100px;
-    background-color: rgb(81, 236, 133);
+    background-color: rgb(212, 21, 21);
 }
 #dragon{
     width: 400px;

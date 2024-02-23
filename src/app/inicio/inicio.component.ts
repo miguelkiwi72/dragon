@@ -24,4 +24,8 @@ export class InicioComponent {
 
 
    }
+
+   irARegistro(){
+    this.router.navigate(['registro']);
+   }
 }
