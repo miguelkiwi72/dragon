@@ -21,8 +21,32 @@ export class ReservaComponent {
     this.reservas=reservasService.reservas
     console.log(this.reservas+ "En el componente")
   }
+  
 
+  botonHabilitado(fecha: any): boolean {
+    const fechaReservaJSON: string = fecha;
 
+// Convertir la cadena de fecha del JSON a un objeto de fecha en JavaScript
+    const fechaReserva: Date = new Date(fechaReservaJSON);
+
+// Obtener la fecha actual
+const fechaActual: Date = new Date();
+
+// Calcular la diferencia en milisegundos entre la fecha de reserva y la fecha actual
+const diferenciaMilisegundos: number = fechaReserva.getTime() - fechaActual.getTime();
+
+// Calcular la diferencia en horas
+const diferenciaHoras: number = diferenciaMilisegundos / (1000 * 60 * 60);
+
+// Verificar si faltan menos de 48 horas para la reserva
+if (diferenciaHoras < 48) {
+    console.log('Faltan menos de 48 horas para la reserva');
+} else {
+    console.log('Faltan más de 48 horas para la reserva');
+}
+   
+    return diferenciaHoras >= 48; // Devuelve true si faltan más de 48 horas para la reserva
+  }
 /*   devolver(){this.reservasService.mostrarReservas().subscribe(
     (reservas: any[]) => {
       console.log("Reservas:", reservas);

@@ -13,7 +13,9 @@
                 Estado: Pendiente
             }
         </h3>
+        @if(botonHabilitado(reserva.fecha_inicio)){
             <button class="btn eliminar">Anular</button>
+        }  
     </div>
 
 }
