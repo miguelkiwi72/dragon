@@ -19,6 +19,8 @@ export class UsuariosService {
         console.log("Usuario existe", response);
         this.respuesta=response;
         localStorage.setItem('usuario', this.respuesta.usuario);
+        localStorage.setItem('id', this.respuesta.id);
+        localStorage.setItem('fecha', this.respuesta.fecha);
       },
       error => {
         console.log("Usuario no existe", error);
