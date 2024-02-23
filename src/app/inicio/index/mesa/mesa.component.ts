@@ -30,6 +30,10 @@ export class MesaComponent {
       this.mesas = result
       )
   }
+
+
+  
+
   ngOnInit(): void {
     // this.elementoVisible =true;
   }

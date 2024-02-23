@@ -11,17 +11,34 @@ import { ReservasService } from '../../../reservas.service';
   styleUrl: './reserva.component.css'
 })
 export class ReservaComponent {
-  reservas:any[]=[];
+  reservas!:any;
   titulo: string= 'Miguel'
-  reservas2:any;
-  constructor(private ReservasService: ReservasService){
-    this.recuperar();
-    this.reservas2=this.ReservasService.mostrarReservas();
+  //reservas2:any;
+  constructor(private reservasService: ReservasService){
+    //this.recuperar();
+    //this.reservas=this.ReservasService.mostrarReservas();
+    console.log(this.reservas+ "En el componente")
   }
-    recuperar() {
+
+
+/*   devolver(){this.reservasService.mostrarReservas().subscribe(
+    (reservas: any[]) => {
+      console.log("Reservas:", reservas);
+      
+      // Iterar sobre las reservas
+      reservas.forEach(reserva => {
+        console.log("ID:", reserva.id);
+        console.log("Nombre:", reserva.nombre);
+        // Aquí puedes hacer lo que necesites con cada objeto de reserva
+      });
+    }
+  );
+} */
+    /* recuperar() {
       this.ReservasService.retornar().subscribe((reservas: Reserva[]) =>
        this.reservas = reservas);
+       console.log(this.reservas2);
     }
-
+ */
     
 }
