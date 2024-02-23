@@ -7,7 +7,7 @@ import { Reserva } from './reserva';
 })
 export class ReservasService {
 
- 
+  reservas!:any;
   private reservasURL='http://localhost:4200/assets/reservas.json';
 
   constructor(private http: HttpClient) { 
@@ -27,9 +27,9 @@ export class ReservasService {
     return this.http.post("http://127.0.0.1:8000/reserva/buscarReserva", id)
     .subscribe(
       response => {
-        return response;
-        
-        console.log("Juego insertado correctamente:", response);
+        //return response;
+        this.reservas=response;
+        console.log("Juego insertado correctamente:", this.reservas);
         //console.log(response)
       },
       error => {

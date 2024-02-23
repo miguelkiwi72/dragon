@@ -16,7 +16,9 @@ export class ReservaComponent {
   //reservas2:any;
   constructor(private reservasService: ReservasService){
     //this.recuperar();
-    //this.reservas=this.ReservasService.mostrarReservas();
+    
+    this.reservasService.mostrarReservas();
+    this.reservas=reservasService.reservas
     console.log(this.reservas+ "En el componente")
   }
 

@@ -1,9 +1,18 @@
-@for(reserva of reservas;track $index){
+@for(reserva of reservas; track $index){
     <div class="card reserva">
         <h1>Reserva nº {{reserva.id_reserva}}</h1>
         
         <h3>Inicio: {{reserva.fecha_inicio}}<br>
-            Fin: {{reserva.fecha_fin}}</h3>
+            Fin: {{reserva.fecha_fin}}
+            Usuario: {{reserva.usuario}}
+            Mesa: {{reserva.mesa}}
+            Juego: {{reserva.juego}}
+            @if(reserva.estado){
+             Estado: Completada   
+            }@else{
+                Estado: Pendiente
+            }
+        </h3>
             <button class="btn eliminar">Anular</button>
     </div>
 
