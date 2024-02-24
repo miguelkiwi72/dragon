@@ -37,7 +37,7 @@ export const routes: Routes = [
             {
                 path:'mesa',
                 component:MesaComponent,
-                canActivate: [usersGuard],
+                //canActivate: [usersGuard],
             },
             {
                 path: 'formularioMesa/:id_mesa',
