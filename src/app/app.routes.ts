@@ -11,6 +11,7 @@ import { BuscarJuegoComponent } from './inicio/index/perfil/buscar-juego/buscar-
 import { ModificarJuegoComponent } from './inicio/index/perfil/modificar-juego/modificar-juego.component';
 import { FormularioMesaComponent } from './inicio/index/formulario-mesa/formulario-mesa.component';
 import { AddMesaComponent } from './inicio/index/add-mesa/add-mesa.component';
+import { usersGuard } from './users.guard';
 
 
 export const routes: Routes = [
@@ -31,10 +32,12 @@ export const routes: Routes = [
     {
         path:'index',
         component:IndexComponent,
+        //canActivate: [usersGuard],
         children:[
             {
                 path:'mesa',
-                component:MesaComponent
+                component:MesaComponent,
+                canActivate: [usersGuard],
             },
             {
                 path: 'formularioMesa/:id_mesa',

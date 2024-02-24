@@ -10,6 +10,26 @@ export class UsuariosService {
   constructor(private http: HttpClient) { }
 
 
+  crearUsuario(usuario:any){
+    let jsonData = JSON.stringify(usuario);
+    console.log(jsonData)
+    return this.http.post("http://127.0.0.1:8000/usuario/crearUsuario", jsonData)
+    .subscribe(
+      response=> {
+        console.log("Usuario:", response);
+        localStorage.setItem('usuario', this.respuesta.usuario);
+        localStorage.setItem('id', this.respuesta.id);
+        localStorage.setItem('fecha', this.respuesta.fecha);
+      },
+      error =>{
+        console.log(error)
+      }
+      
+    )
+
+    }
+  
+
   buscarUsuario(usuario: any) {
     let jsonData = JSON.stringify(usuario);
     console.log(jsonData)
@@ -25,7 +45,7 @@ export class UsuariosService {
       error => {
         console.log("Usuario no existe", error);
         this.respuesta=error;
-        //localStorage.setItem('usuario', this.respuesta.usuario);
+        localStorage.setItem('usuario', this.respuesta.mensaje);
       }
     );
     
