@@ -56,5 +56,18 @@ export class ReservasService {
     );
   }
 
-
+  anularReserva(id:any){
+    return this.http.put("http://127.0.0.1:8000/reserva/cambiarReserva", id)
+    .subscribe(
+      response => {
+        //return response;
+        this.reservas=response;
+        console.log("Reserva Cambiada correctamente:", this.reservas);
+        //console.log(response)
+      },
+      error => {
+        console.error("No se cambio la reserva:", error);
+      }
+    );
+  }
 }
