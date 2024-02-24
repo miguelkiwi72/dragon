@@ -43,7 +43,7 @@ export class UsuariosService {
         localStorage.setItem('fecha', this.respuesta.fecha);
       },
       error => {
-        console.log("Usuario no existe", error);
+        console.log("Usuario:", error);
         this.respuesta=error;
         localStorage.setItem('usuario', this.respuesta.mensaje);
       }
