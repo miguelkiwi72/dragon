@@ -40,7 +40,7 @@ export const routes: Routes = [
                 //canActivate: [usersGuard],
             },
             {
-                path: 'formularioMesa/:id_mesa',
+                path: 'formularioMesa/:id',
                 component: FormularioMesaComponent
             },
             {

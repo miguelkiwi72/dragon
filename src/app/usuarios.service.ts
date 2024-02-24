@@ -18,6 +18,7 @@ export class UsuariosService {
       response=> {
         console.log("Usuario:", response);
         localStorage.setItem('usuario', this.respuesta.usuario);
+        localStorage.setItem('nombre' , this.respuesta.nombre);
         localStorage.setItem('id', this.respuesta.id);
         localStorage.setItem('fecha', this.respuesta.fecha);
       },
@@ -39,6 +40,7 @@ export class UsuariosService {
         console.log("Usuario existe", response);
         this.respuesta=response;
         localStorage.setItem('usuario', this.respuesta.usuario);
+        localStorage.setItem('nombre' , this.respuesta.nombre);
         localStorage.setItem('id', this.respuesta.id);
         localStorage.setItem('fecha', this.respuesta.fecha);
       },
